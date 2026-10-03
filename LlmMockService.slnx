@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/LlmMockService.Core/LlmMockService.Core.csproj" />
+    <Project Path="src/LlmMockService.Server/LlmMockService.Server.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/LlmMockService.Core.Tests/LlmMockService.Core.Tests.csproj" />
+    <Project Path="tests/LlmMockService.Server.Tests/LlmMockService.Server.Tests.csproj" />
+  </Folder>
+</Solution>

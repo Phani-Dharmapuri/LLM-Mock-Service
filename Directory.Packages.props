@@ -1,0 +1,22 @@
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- Transitive pin: Microsoft.ML.Tokenizers 2.0.0 brings Microsoft.Bcl.Memory 9.0.4 (GHSA-73j8-2gch-69rq, fixed in 10.0.4). -->
+    <PackageVersion Include="Microsoft.Bcl.Memory" Version="10.0.12" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Runtime -->
+    <PackageVersion Include="Microsoft.ML.Tokenizers" Version="2.0.0" />
+    <PackageVersion Include="Microsoft.ML.Tokenizers.Data.O200kBase" Version="2.0.0" />
+    <PackageVersion Include="Microsoft.ML.Tokenizers.Data.Cl100kBase" Version="2.0.0" />
+    <!-- Tests -->
+    <PackageVersion Include="xunit.v3" Version="4.0.1" />
+    <PackageVersion Include="Microsoft.Extensions.TimeProvider.Testing" Version="10.10.0" />
+    <PackageVersion Include="Microsoft.AspNetCore.Mvc.Testing" Version="10.0.12" />
+    <!-- Contract tests: the official client SDKs the mock must be wire-compatible with. -->
+    <PackageVersion Include="Azure.AI.OpenAI" Version="2.9.0-beta.1" />
+  </ItemGroup>
+</Project>

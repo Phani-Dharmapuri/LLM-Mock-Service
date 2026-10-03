@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <Description>HTTP host for LlmMockService: wire-compatible OpenAI and Azure OpenAI endpoints.</Description>
+    <!-- No culture-sensitive behaviour; also matches the chiseled runtime image, which ships without ICU. -->
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LlmMockService.Core\LlmMockService.Core.csproj" />
+  </ItemGroup>
+
+</Project>

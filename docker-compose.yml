@@ -1,0 +1,13 @@
+# Runs the mock on http://localhost:8080. Add your own app as another service and point it at http://llm-mock:8080.
+services:
+  llm-mock:
+    build: .
+    image: llm-mock-service:local
+    ports:
+      - "8080:8080"
+    environment:
+      # Any LlmMock setting can be overridden here (":" becomes "__").
+      LlmMock__StreamTickMilliseconds: "25"
+    # Uncomment to replace the illustrative profiles/deployments with your own calibrated ones.
+    # volumes:
+    #   - ./my-profiles.json:/app/appsettings.Production.json:ro

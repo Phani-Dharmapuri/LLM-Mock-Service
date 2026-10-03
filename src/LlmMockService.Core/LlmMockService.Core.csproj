@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>Protocol-agnostic simulation engine for LlmMockService: latency model, quotas, fault injection and token accounting.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML.Tokenizers" />
+    <PackageReference Include="Microsoft.ML.Tokenizers.Data.O200kBase" />
+    <PackageReference Include="Microsoft.ML.Tokenizers.Data.Cl100kBase" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="LlmMockService.Core.Tests" />
+  </ItemGroup>
+
+</Project>
