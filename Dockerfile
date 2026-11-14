@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 # Build on the host architecture and cross-compile for the target, so multi-arch builds avoid emulating the SDK.
-FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:10.0 AS build
+FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:11.0 AS build
 ARG TARGETARCH
 WORKDIR /src
 
